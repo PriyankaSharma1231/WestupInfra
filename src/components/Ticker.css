@@ -1,0 +1,31 @@
+.ticker {
+  background: var(--accent);
+  padding: 11px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker__inner {
+  display: inline-flex;
+  animation: ticker-scroll 24s linear infinite;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.ticker__item {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--black);
+  padding: 0 24px;
+}
+
+.ticker__dot {
+  color: rgba(0,0,0,0.3);
+  margin-left: 24px;
+}

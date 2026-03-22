@@ -1,0 +1,133 @@
+.why {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--steel);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.why__left {
+  padding: 80px 56px;
+  border-right: 1px solid var(--border);
+}
+
+.why__right {
+  padding: 80px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.why__heading {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 46px;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.why__intro {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+.why__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.why__item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+.why__item:last-child { border-bottom: none; }
+
+.why__num {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  min-width: 24px;
+  padding-top: 2px;
+}
+
+.why__item-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.why__item-desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* Barmer badge */
+.why__barmer-badge {
+  background: rgba(21, 101, 192, 0.15);
+  border: 1px solid rgba(21, 101, 192, 0.4);
+  padding: 16px 18px;
+}
+.why__barmer-badge p {
+  font-size: 13px;
+  color: #90CAF9;
+  line-height: 1.7;
+}
+.why__barmer-badge strong { color: var(--white); font-weight: 500; }
+
+/* Cert cards */
+.why__cert {
+  border: 1px solid var(--border);
+  padding: 20px;
+  background: var(--dark);
+}
+
+.why__cert-tag {
+  display: inline-block;
+  background: rgba(245, 166, 35, 0.1);
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  margin-bottom: 8px;
+}
+
+.why__cert-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.why__cert-desc {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .why { grid-template-columns: 1fr; }
+  .why__left { border-right: none; border-bottom: 1px solid var(--border); padding: 48px 24px; }
+  .why__right { padding: 48px 24px; }
+  .why__heading { font-size: 36px; }
+}
