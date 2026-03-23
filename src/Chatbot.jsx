@@ -1,23 +1,9 @@
 import { useState, useRef, useEffect } from "react";
-import Groq from "groq-sdk";
 import virtualassistant from "../src/asset/virtualassistant.png";
 
-const groq = new Groq({
-  apiKey: import.meta.env.VITE_GROQ_API_KEY,
-  dangerouslyAllowBrowser: true,
-});
 
-const SYSTEM_PROMPT = `You are a helpful solar energy assistant for Westup Infra Pvt. Ltd., a solar company in India.
-You help industrial and commercial clients understand solar energy solutions.
-You know about:
-- Solar panel installation for industries, factories, warehouses
-- Grid substation and HT works
-- Solar capacity calculation based on electricity bills
-- ROI and payback period calculations
-- Government subsidies for solar in India
-- Net metering policies
-Always be helpful, professional and encourage interested clients to fill the inquiry form on the website.
-Keep responses short and clear. Reply in English.`;
+
+
 
 export default function Chatbot() {
   const [open, setOpen] = useState(false);
@@ -44,34 +30,22 @@ export default function Chatbot() {
     setLoading(true);
 
     try {
-      const chatMessages = [
-        { role: "system", content: SYSTEM_PROMPT },
-        ...messages.map((m) => ({
-          role: m.role === "bot" ? "assistant" : m.role,
-          content: m.text,
-        })),
-        { role: "user", content: userMessage },
-      ];
+      const history = messages.map(m => ({
+        role: m.role === "bot" ? "assistant" : m.role,
+        content: m.text
+      }));
 
-      const response = await groq.chat.completions.create({
-        model: "llama-3.1-8b-instant",
-        messages: chatMessages,
-        max_tokens: 300,
+      const res = await fetch("/.netlify/functions/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: userMessage, history })
       });
 
-      const botReply =
-        response.choices[0]?.message?.content ||
-        "Sorry, I could not get a response.";
-      setMessages((prev) => [...prev, { role: "assistant", text: botReply }]);
+      const data = await res.json();
+      setMessages(prev => [...prev, { role: "assistant", text: data.reply }]);
     } catch (error) {
       console.error(error);
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "assistant",
-          text: "Sorry, something went wrong. Please try again!",
-        },
-      ]);
+      setMessages(prev => [...prev, { role: "assistant", text: "Sorry, something went wrong. Please try again!" }]);
     }
 
     setLoading(false);
