@@ -1,5 +1,4 @@
 import './Services.css';
-
 const services = [
   {
     num: '01',
@@ -30,6 +29,26 @@ const services = [
     num: '06',
     title: 'Manpower Supply Services',
     desc: 'Post-commissioning operations and maintenance contracts for long-term plant health, cleaning, and performance assurance.',
+  },
+  {
+    num: '07',
+    title: 'Solar & Energy Consultancy',
+    desc: 'End-to-end project advisory including feasibility studies, DPR preparation, land assessment, regulatory approvals, and techno-commercial guidance for utility-scale solar projects.',
+  },
+  {
+    num: '08',
+    title: 'Import & Export Services',
+    desc: 'Procurement and logistics support for solar modules, inverters, transformers, and balance-of-plant equipment from domestic and international suppliers.',
+  },
+  {
+    num: '09',
+    title: 'Logistics & Transportation',
+    desc: 'Heavy equipment transport, oversized load movement, on-site material handling, and last-mile delivery coordination for solar project sites across Rajasthan and beyond.',
+  },
+  {
+    num: '10',
+    title: 'Security & Surveillance',
+    desc: 'Comprehensive site security solutions including CCTV installation, perimeter fencing, guard deployment, and remote monitoring for active and commissioned solar plants.',
   },
 ];
 

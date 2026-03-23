@@ -1,0 +1,139 @@
+.clients {
+  background: #f8faff;
+  padding: 80px 40px;
+  border-top: 1px solid #e2eaf5;
+}
+
+.clients__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.clients__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.clients__eyebrow {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #1565c0;
+  margin-bottom: 12px;
+}
+
+.clients__heading {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0d1b2a;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.clients__heading em {
+  font-style: normal;
+  color: #1565c0;
+}
+
+.clients__subtext {
+  font-size: 15px;
+  color: #4a6a8a;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.clients__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.clients__card {
+  background: #ffffff;
+  border: 1px solid #dce8f5;
+  border-radius: 8px;
+  padding: 24px 16px;
+  text-align: center;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.clients__card:hover {
+  box-shadow: 0 4px 20px rgba(21, 101, 192, 0.1);
+  border-color: #1565c0;
+}
+
+.clients__name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0d1b2a;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.clients__trust {
+  background: #1565c0;
+  border-radius: 10px;
+  padding: 20px 28px;
+  text-align: center;
+}
+
+.clients__trust p {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.clients__trust strong {
+  color: #f5a623;
+}
+.clients__logo-wrap {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.clients__logo {
+  max-width: 120px;
+  max-height: 60px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: filter 0.3s, opacity 0.3s;
+}
+
+.clients__card:hover .clients__logo {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.clients__name {
+  font-size: 11px;
+  font-weight: 700;
+  color: #0d1b2a;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .clients {
+    padding: 60px 20px;
+  }
+
+  .clients__heading {
+    font-size: 26px;
+  }
+
+  .clients__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -6,14 +6,14 @@ const directors = [
     name: "Jigyanshu Acharya",
     role: "Director · Since 16 May 2025",
   },
-  {
-    initials: "UR",
-    name: "Uday Ramawat",
-    role: "Director · Since 16 May 2025",
-  },
+  // {
+  //   initials: "UR",
+  //   name: "Uday Ramawat",
+  //   role: "Director · Since 16 May 2025",
+  // },
   {
     initials: "PS",
-    name: "Pushpendra Singh Bhati",
+    name: "Pushpendra",
     role: "Director · Since 16 May 2025",
   },
 ];
@@ -49,12 +49,12 @@ export default function About() {
           scale distribution.
         </p>
         <p className="about__body">
-          JIGYANSHU ACHARYA and Pushpendra Singh Bhati is the founder of NEETI
-          ENTERPRISES. UDAY RAMAWAT, JIGYANSHU ACHARYA comes from a business
-          family and has humble beginnings. Through dedication and hard work, he
-          has risen to success on his own. He began his journey in the
-          construction industry at a young age and boasts over five years of
-          extensive professional experience
+          Jigyanshu Acharya,Pushpendra and Uday— is the founder of WestUp
+          Infra Pvt Ltd. Jigyanshu Acharya comes from a business family and has
+          humble beginnings. Through dedication and hard work, he has risen to
+          success on his own. He began his journey in the construction industry
+          at a young age and boasts over five years of extensive professional
+          experience
         </p>
 
         <span className="section-label" style={{ marginTop: "28px" }}>

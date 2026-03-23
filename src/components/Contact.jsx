@@ -32,28 +32,35 @@ export default function Contact() {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
   const handleSubmit = async (e) => {
+    console.log("dffgfg");
+    
     e.preventDefault();
     setStatus("loading");
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/inquiry", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
-          phone: form.phone,
-          company: form.company,
-          project_type: form.projectType,
-          land_area: form.landArea,
-          capacity: form.capacity,
-          location: form.location,
-          brief: form.brief,
-        }),
-      });
+       console.log("NONON");
+      const response = await fetch(
+        "https://https-render-com-hho8.onrender.com/inquiry",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: form.name,
+            email: form.email,
+            phone: form.phone,
+            company: form.company,
+            project_type: form.projectType,
+            land_area: form.landArea,
+            capacity: form.capacity,
+            location: form.location,
+            brief: form.brief,
+          }),
+        },
+      );
 
       if (!response.ok) throw new Error("Server error");
-
+      console.log("REEEE",response);
+      
       setStatus("success");
     } catch (error) {
       console.error(error);
@@ -145,6 +152,7 @@ export default function Contact() {
                     value={form.phone}
                     onChange={handleChange}
                     required
+                    maxLength={15}
                   />
                 </div>
                 <div className="contact__field">
@@ -174,11 +182,16 @@ export default function Contact() {
                   <option>Grid Substation & HT Works</option>
                   <option>Solar Farm O&M</option>
                   <option>Other Infrastructure</option>
+                  <option>Consultancy</option>
+                  <option>Import & Export</option>
+                  <option>Logistics</option>
+                  <option>Security Surveillance</option>
+                  <option>Other</option>
                 </select>
               </div>
 
               <div className="contact__form-row">
-                <div className="contact__field">
+                {/* <div className="contact__field">
                   <label htmlFor="landArea">Land Area (Acres)</label>
                   <input
                     id="landArea"
@@ -188,8 +201,8 @@ export default function Contact() {
                     value={form.landArea}
                     onChange={handleChange}
                   />
-                </div>
-                <div className="contact__field">
+                </div> */}
+                {/* <div className="contact__field">
                   <label htmlFor="capacity">Target Capacity (MW)</label>
                   <input
                     id="capacity"
@@ -199,7 +212,7 @@ export default function Contact() {
                     value={form.capacity}
                     onChange={handleChange}
                   />
-                </div>
+                </div> */}
               </div>
 
               <div className="contact__field">
@@ -225,8 +238,8 @@ export default function Contact() {
                 />
               </div>
 
-              <button type="submit" className="contact__submit">
-                Submit Project Enquiry
+              <button type="submit" className="contact__submit" disabled={status === "loading"}> 
+                {status === "loading" ? "Submitting..." : "Submit Project Enquiry"}
               </button>
             </form>
           )}

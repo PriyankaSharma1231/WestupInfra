@@ -48,7 +48,9 @@
   padding: 18px 0;
   border-bottom: 1px solid var(--border);
 }
-.why__item:last-child { border-bottom: none; }
+.why__item:last-child {
+  border-bottom: none;
+}
 
 .why__num {
   font-family: var(--font-display);
@@ -84,10 +86,13 @@
 }
 .why__barmer-badge p {
   font-size: 13px;
-  color: #90CAF9;
+  color: #143149;
   line-height: 1.7;
 }
-.why__barmer-badge strong { color: var(--white); font-weight: 500; }
+.why__barmer-badge strong {
+  color: var(--white);
+  font-weight: 500;
+}
 
 /* Cert cards */
 .why__cert {
@@ -126,8 +131,18 @@
 }
 
 @media (max-width: 900px) {
-  .why { grid-template-columns: 1fr; }
-  .why__left { border-right: none; border-bottom: 1px solid var(--border); padding: 48px 24px; }
-  .why__right { padding: 48px 24px; }
-  .why__heading { font-size: 36px; }
+  .why {
+    grid-template-columns: 1fr;
+  }
+  .why__left {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 48px 24px;
+  }
+  .why__right {
+    padding: 48px 24px;
+  }
+  .why__heading {
+    font-size: 36px;
+  }
 }

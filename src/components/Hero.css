@@ -8,14 +8,14 @@
 }
 
 .hero__grid-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  opacity: 0.06;
-  background-image:
-    linear-gradient(rgba(21, 101, 192, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(21, 101, 192, 0.15) 1px, transparent 1px);
-  background-size: 44px 44px;
+ position: absolute;
+inset: 0;
+z-index: 0;
+opacity: 0.05;
+background-image:
+linear-gradient(var(--blue) 1px, transparent 1px),
+linear-gradient(90deg, var(--blue) 1px, transparent 1px);
+background-size: 44px 44px;
 }
 
 .hero__glow {

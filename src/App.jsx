@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
 import Chatbot from './Chatbot';
+import Clients from './components/Clients';
 
 export default function App() {
   return (
@@ -17,12 +18,15 @@ export default function App() {
       <Hero />
       <Ticker />
       <About />
+       <Clients/>
       <Services />
       <Projects />
       <WhyUs />
+      
       <Contact />
       <Footer />
       <Chatbot />
+     
     </div>
   );
 }

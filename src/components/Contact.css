@@ -40,9 +40,15 @@
   padding: 16px 0;
   border-bottom: 1px solid var(--border);
 }
-.contact__row:last-child { border-bottom: none; }
+.contact__row:last-child {
+  border-bottom: none;
+}
 
-.contact__icon { font-size: 14px; min-width: 20px; margin-top: 1px; }
+.contact__icon {
+  font-size: 14px;
+  min-width: 20px;
+  margin-top: 1px;
+}
 
 .contact__row strong {
   display: block;
@@ -54,7 +60,10 @@
   margin-bottom: 2px;
   font-family: var(--font-body);
 }
-.contact__row span { font-size: 13px; color: var(--white); }
+.contact__row span {
+  font-size: 13px;
+  color: var(--white);
+}
 
 /* Form */
 .contact__form-wrap {
@@ -99,15 +108,22 @@
 }
 .contact__field input:focus,
 .contact__field textarea:focus,
-.contact__field select:focus { border-color: var(--accent); }
+.contact__field select:focus {
+  border-color: var(--accent);
+}
 
-.contact__field textarea { height: 90px; resize: vertical; }
-.contact__field select option { background: var(--dark); }
+.contact__field textarea {
+  height: 90px;
+  resize: vertical;
+}
+.contact__field select option {
+  background: var(--dark);
+}
 
 .contact__submit {
   width: 100%;
   background: var(--accent);
-  color: var(--black);
+  color: #d6e8ff;
   border: none;
   padding: 14px;
   font-family: var(--font-display);
@@ -119,7 +135,9 @@
   transition: opacity 0.2s;
   margin-top: 4px;
 }
-.contact__submit:hover { opacity: 0.85; }
+.contact__submit:hover {
+  opacity: 0.85;
+}
 
 /* Success */
 .contact__success {
@@ -136,7 +154,7 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: rgba(245,166,35,0.15);
+  background: rgba(245, 166, 35, 0.15);
   border: 1px solid var(--accent);
   display: flex;
   align-items: center;
@@ -161,12 +179,23 @@
 }
 
 @media (max-width: 900px) {
-  .contact { padding: 56px 24px; }
-  .contact__grid { grid-template-columns: 1fr; gap: 40px; }
-  .contact__heading { font-size: 36px; }
-  .contact__form-wrap { padding: 28px 20px; }
+  .contact {
+    padding: 56px 24px;
+  }
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .contact__heading {
+    font-size: 36px;
+  }
+  .contact__form-wrap {
+    padding: 28px 20px;
+  }
 }
 
 @media (max-width: 500px) {
-  .contact__form-row { grid-template-columns: 1fr; }
+  .contact__form-row {
+    grid-template-columns: 1fr;
+  }
 }

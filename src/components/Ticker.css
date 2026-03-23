@@ -11,21 +11,26 @@
 }
 
 @keyframes ticker-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .ticker__item {
   font-family: var(--font-display);
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 600;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: var(--black);
+  color: var(--dark);
   padding: 0 24px;
 }
 
 .ticker__dot {
-  color: rgba(0,0,0,0.3);
+  color: #ffffff4d;
   margin-left: 24px;
+  /* font-size: 12px; */
 }

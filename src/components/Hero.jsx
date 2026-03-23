@@ -16,7 +16,7 @@ export default function Hero() {
       {/* ── Left Content ── */}
       <div className="hero__content">
         <span className="hero__eyebrow">
-          Utility-Scale Solar EPC Contractor
+          End-to-End Infrastructure & EPC Solutions
         </span>
         <p className="hero__location">
           📍 Barmer, Rajasthan — Heart of India's Solar Belt
@@ -24,14 +24,15 @@ export default function Hero() {
         <h1 className="hero__heading">
           Building
           <br />
-          <em>Utility-Scale</em>
+          <em>India's</em>
           <br />
-          Solar Farms
+          Infrastructure
         </h1>
         <p className="hero__desc">
-          Ground-mounted solar EPC for India's largest energy corporates.
-          20-acre to 500-acre land projects executed with precision — from
-          earthworks to grid synchronisation.
+          From utility-scale solar farms to civil construction, logistics &
+          transportation, and security surveillance — Westup Infra delivers
+          complete infrastructure solutions. 20-acre to 500-acre solar projects
+          executed with precision, from earthworks to grid synchronisation.
         </p>
         <div className="hero__btns">
           <button className="btn-accent">Start a Project</button>
@@ -43,7 +44,6 @@ export default function Hero() {
       <aside className="hero__panel">
         <div className="hero__panel-img" />
         <div className="hero__panel-overlay" />
-
         <div className="hero__panel-content">
           {metrics.map((m, i) => (
             <div key={i}>
@@ -58,8 +58,8 @@ export default function Hero() {
             </div>
           ))}
           <div className="hero__cin-badge">
-            <p className="hero__cin-badge p">CIN · MCA Registered</p>
-            <span className="hero__cin-badge span">U41001RJ2025PTC102845</span>
+            <p>CIN · MCA Registered</p>
+            <span>U41001RJ2025PTC102845</span>
           </div>
         </div>
       </aside>
