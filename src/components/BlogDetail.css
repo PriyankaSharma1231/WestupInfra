@@ -1,0 +1,17 @@
+.blogDetail {
+  padding: 80px 60px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.blogDetail h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #0d1b2a;
+}
+
+.blogDetail p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4a6a8a;
+}
