@@ -39,14 +39,21 @@ export default function BlogList() {
           <div className="bloglist__grid">
             {filtered.map(blog => (
               <Link to={`/blog/${blog.slug}`} key={blog.id} className="bloglist__card">
-                <span className="bloglist__card-cat">{blog.category}</span>
-                <h2 className="bloglist__card-title">{blog.title}</h2>
-                <p className="bloglist__card-summary">{blog.summary}</p>
-                <div className="bloglist__card-meta">
-                  <span>{blog.date}</span>
-                  <span>{blog.readTime}</span>
+                <img
+                  src={blog.image}
+                  alt={blog.title}
+                  className="bloglist__card-img"
+                />
+                <div className="bloglist__card-body">
+                  <span className="bloglist__card-cat">{blog.category}</span>
+                  <h2 className="bloglist__card-title">{blog.title}</h2>
+                  <p className="bloglist__card-summary">{blog.summary}</p>
+                  <div className="bloglist__card-meta">
+                    <span>{blog.date}</span>
+                    <span>{blog.readTime}</span>
+                  </div>
+                  <span className="bloglist__card-link">Read Article →</span>
                 </div>
-                <span className="bloglist__card-link">Read Article →</span>
               </Link>
             ))}
           </div>
